@@ -15,8 +15,6 @@ func main() {
 	// load .env file
 	godotenv.Load(".env")
 	b, err := tb.NewBot(tb.Settings{
-		// You can also set custom API URL.
-		// If field is empty it equals to "https://api.telegram.org".
 		Token:  os.Getenv("apikeybot"),
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
